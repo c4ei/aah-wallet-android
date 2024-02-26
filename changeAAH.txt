@@ -1,6 +1,11 @@
 changeAAH.txt
 git checkout aah240226
 
+https://play.google.com/store/apps/details?id=net.c4ei.aahwallet
+
+/home/dev/www/aah-wallet-android/app/google-services.json
+    "package_name": "io.stormbird.wallet"
+--> "package_name": "net.c4ei.aahwallet"
 #############################################################
 패키지명 변경 방법
 1. Compact Middle Pacjages 해제
@@ -49,7 +54,7 @@ token discovery and transactions
 def DEFUALT_WALLETCONNECT_PROJECT_ID = "\"8b3d1de375a133958815ed8182d7f72d\""
 ################################################################
     https://cloud.walletconnect.com/sign-up
-    c4ei.net@gmail.com/A비번!2~4
+    c4ei.net@gmail.com/Asdf!234
 
     https://echo.walletconnect.com/8b3d1de375a133958815ed8182d7f72d
     https://cloud.walletconnect.com/app/project?uuid=06fe53bb-d18c-4d41-b7df-f111d3931e85
