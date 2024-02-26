@@ -76,7 +76,7 @@ android {
         versionCode 256
         versionName "3.77"
 
-        applicationId "io.stormbird.wallet"
+        applicationId 'net.c4ei.aahwallet'
         minSdkVersion 24
         targetSdkVersion 33
         compileSdk 33
@@ -84,10 +84,10 @@ android {
         testInstrumentationRunnerArguments clearPackageData: 'true'
         def XInfuraAPI = "XInfuraAPI"
         //Put your Infura key here, NB with over 30 - 40 users this API key will rate limit, it's only here for bootstrapping a free build
-        def DEFAULT_INFURA_API_KEY = "\"da3717f25f824cc1baa32d812386d93f\""
-        def DEFAULT_OPENSEA_API_KEY = "\"...\""; //Put your OpenSea developer API key in here, otherwise you are reliant on the backup NFT fetch method (which usually works ok)
-        def DEFAULT_POLYGONSCAN_API_KEY = "\"...\""; //Put your Polygonscan developer API key in here to get access to Polygon/Mumbai token discovery and transactions
-        def DEFUALT_WALLETCONNECT_PROJECT_ID = "\"40c6071febfd93f4fe485c232a8a4cd9\""
+        def DEFAULT_INFURA_API_KEY = "\"c0e9018f7ea942f2a5673f23fe2d058d\""
+        def DEFAULT_OPENSEA_API_KEY = "\"3f32e166e52c42218896c3d2729eb818\""; //Put your OpenSea developer API key in here, otherwise you are reliant on the backup NFT fetch method (which usually works ok)
+        def DEFAULT_POLYGONSCAN_API_KEY = "\"IF8DN5UMUJ7FWG1KDVGH7Z17KW9CREHZ1Q\""; //Put your Polygonscan developer API key in here to get access to Polygon/Mumbai token discovery and transactions
+        def DEFUALT_WALLETCONNECT_PROJECT_ID = "\"8b3d1de375a133958815ed8182d7f72d\""
         def DEFAULT_AURORA_API_KEY = "\"HFDDY5BNKGXBB82DE2G8S64C3C41B76PYI\""; //Put your Aurorascan.dev API key here - this one will rate limit as it is common
 
         buildConfigField 'int', 'DB_VERSION', '54'

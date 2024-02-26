@@ -23,7 +23,7 @@ app > res > value > strings.xml
 
 1    Download Android Studio.
 2    Clone this repository
-3    Obtain a free Infura API key and replace the one in build.gradle --> /home/dev/www/c4ei-wallet-android/app/build.gradle
+3    Obtain a free Infura API key and replace the one in build.gradle --> /home/dev/www/aah-wallet-android/app/build.gradle
         c0e9018f7ea942f2a5673f23fe2d058d
 4    Generate a GitHub Personal Access Token with read:packages, read:user permission
     Edit ~/.gradle/gradle.properties add blow properties:
@@ -49,8 +49,9 @@ token discovery and transactions
 def DEFUALT_WALLETCONNECT_PROJECT_ID = "\"8b3d1de375a133958815ed8182d7f72d\""
 ################################################################
     https://cloud.walletconnect.com/sign-up
-    c4ei.net@gmail.com/Asdf!234
+    c4ei.net@gmail.com/A비번!2~4
 
+    https://echo.walletconnect.com/8b3d1de375a133958815ed8182d7f72d
     https://cloud.walletconnect.com/app/project?uuid=06fe53bb-d18c-4d41-b7df-f111d3931e85
 ################################################################
 def DEFAULT_AURORA_API_KEY = "\"HFDDY5BNKGXBB82DE2G8S64C3C41B76PYI\""; //Put your Aurorascan.dev API key here - this one will rate limit as it is common
