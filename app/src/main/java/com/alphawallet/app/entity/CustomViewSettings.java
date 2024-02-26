@@ -32,15 +32,22 @@ public class CustomViewSettings
     //See also lockedChains. You can also lock the chains that are displayed on.
     //If you leave the locked chains empty, the token will appear if the chain is selected
     private static final List<TokenInfo> lockedTokens = Arrays.asList(
-            // new TokenInfo(String TokenAddress, String TokenName, String TokenSymbol, int TokenDecimals, boolean isEnabled, long ChainId)
-            //new TokenInfo("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "USD Coin", "USDC", 6, true, EthereumNetworkBase.MAINNET_ID),
-            //new TokenInfo("0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E", "Compound BAT", "CBAT", 8, true, EthereumNetworkBase.MAINNET_ID)
+        // new TokenInfo(String TokenAddress, String TokenName, String TokenSymbol, int TokenDecimals, boolean isEnabled, long ChainId)
+        //new TokenInfo("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "USD Coin", "USDC", 6, true, EthereumNetworkBase.MAINNET_ID),
+        //new TokenInfo("0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E", "Compound BAT", "CBAT", 8, true, EthereumNetworkBase.MAINNET_ID)
+        new TokenInfo("0x3adBF8fa04c21517D8E50908305D0413D2A44300", "USD Coin", "AUSD", 6, true, EthereumNetworkBase.AAH_ID)
+        ,new TokenInfo("0xf10E02Ce41b28e52AD015eaE3A83e040D4Aee3A8", "USDT Coin", "USDT", 6, true, EthereumNetworkBase.C4EI_ID)
+        ,new TokenInfo("0x18814b01b5cc76f7043e10fd268cc4364df47da0", "c4ei.net 4 klay", "CEIK", 6, true, EthereumNetworkBase.KLAYTN_ID)
+        ,new TokenInfo("0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "Tether USD", "USDT", 6, true, EthereumNetworkBase.POLYGON_ID)
     );
 
     //List of chains that wallet can show
     //If blank, enable the user filter select dialog, if there are any entries here, the select network dialog is disabled
     //Note: you should always enable the chainId corresponding to the chainIDs in the lockedTokens.
     private static final List<Long> lockedChains = Arrays.asList(
+            EthereumNetworkBase.AAH_ID
+            ,EthereumNetworkBase.C4EI_ID
+
             //EthereumNetworkBase.MAINNET_ID //EG only show Main, xdai, classic and two testnets. Don't allow user to select any others
             //EthereumNetworkBase.XDAI_ID,
             //EthereumNetworkBase.GOERLI_ID //You can mix testnets and mainnets, but probably shouldn't as it may result in people getting scammed
@@ -48,6 +55,10 @@ public class CustomViewSettings
 
     public static final List<Long> alwaysVisibleChains = Arrays.asList(
             EthereumNetworkBase.MAINNET_ID
+            ,EthereumNetworkBase.AAH_ID
+            ,EthereumNetworkBase.C4EI_ID
+            ,EthereumNetworkBase.KLAYTN_ID
+            ,EthereumNetworkBase.POLYGON_ID
     );
 
     public static boolean alwaysShow(long chainId)

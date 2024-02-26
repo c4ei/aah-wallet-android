@@ -42,6 +42,10 @@ import static com.alphawallet.ethereum.EthereumNetworkBase.KLAYTN_BAOBAB_ID;
 import static com.alphawallet.ethereum.EthereumNetworkBase.KLAYTN_BAOBAB_RPC;
 import static com.alphawallet.ethereum.EthereumNetworkBase.KLAYTN_ID;
 import static com.alphawallet.ethereum.EthereumNetworkBase.KLAYTN_RPC;
+import static com.alphawallet.ethereum.EthereumNetworkBase.C4EI_ID;
+import static com.alphawallet.ethereum.EthereumNetworkBase.C4EI_RPC;
+import static com.alphawallet.ethereum.EthereumNetworkBase.AAH_ID;
+import static com.alphawallet.ethereum.EthereumNetworkBase.AAH_RPC;
 import static com.alphawallet.ethereum.EthereumNetworkBase.LINEA_FREE_RPC;
 import static com.alphawallet.ethereum.EthereumNetworkBase.LINEA_ID;
 import static com.alphawallet.ethereum.EthereumNetworkBase.LINEA_TEST_FREE_RPC;
@@ -153,6 +157,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
             : KLAYTN_RPC;
     public static final String USE_KLAYTN_BAOBAB_RPC = !TextUtils.isEmpty(keyProvider.getBlockPiBaobabKey()) ? "https://klaytn-baobab.blockpi.network/v1/rpc/" + keyProvider.getBlockPiBaobabKey()
             : KLAYTN_BAOBAB_RPC;
+    public static final String USE_C4EI_RPC = "https://rpc.c4ei.net";
+    public static final String USE_AAH_RPC = "https://rpc.c4ex.net";
     public static final String CRONOS_MAIN_RPC_URL = "https://evm.cronos.org";
 
     // Use the "Free" routes as backup in order to diversify node usage; to avoid single point of failure
@@ -188,8 +194,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     //If your wallet prioritises xDai for example, you may want to move the XDAI_ID to the front of this list,
     //Then xDai would appear as the first token at the top of the wallet
     private static final List<Long> hasValue = new ArrayList<>(Arrays.asList(
-            MAINNET_ID, GNOSIS_ID, POLYGON_ID, ROOTSTOCK_MAINNET_ID, CLASSIC_ID, LINEA_ID, BINANCE_MAIN_ID, HECO_ID, AVALANCHE_ID,
-            FANTOM_ID, OPTIMISTIC_MAIN_ID, CRONOS_MAIN_ID, ARBITRUM_MAIN_ID, PALM_ID, KLAYTN_ID, IOTEX_MAINNET_ID, AURORA_MAINNET_ID, MILKOMEDA_C1_ID, OKX_ID));
+            AAH_ID, C4EI_ID, MAINNET_ID, KLAYTN_ID, GNOSIS_ID, POLYGON_ID, ROOTSTOCK_MAINNET_ID, CLASSIC_ID, LINEA_ID, BINANCE_MAIN_ID, HECO_ID, AVALANCHE_ID,
+            FANTOM_ID, OPTIMISTIC_MAIN_ID, CRONOS_MAIN_ID, ARBITRUM_MAIN_ID, PALM_ID, IOTEX_MAINNET_ID, AURORA_MAINNET_ID, MILKOMEDA_C1_ID, OKX_ID));
 
     private static final List<Long> testnetList = new ArrayList<>(Arrays.asList(
             SEPOLIA_TESTNET_ID, POLYGON_TEST_ID, HOLESKY_ID, GOERLI_ID, BINANCE_TEST_ID,
@@ -212,6 +218,14 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     private static final LongSparseArray<NetworkInfo> builtinNetworkMap = new LongSparseArray<NetworkInfo>()
     {
         {
+            put(AAH_ID, new NetworkInfo(C.AAH_NAME, C.AAH_SYMBOL,
+                USE_AAH_RPC,
+                "https://exp.c4ex.net/tx/", AAH_ID, AAH_RPC,
+                ""));
+            put(C4EI_ID, new NetworkInfo(C.C4EI_NAME, C.C4EI_SYMBOL,
+                USE_C4EI_RPC,
+                "https://exp.c4ei.net/tx/", C4EI_ID, C4EI_RPC,
+                ""));
             put(MAINNET_ID, new NetworkInfo(C.ETHEREUM_NETWORK_NAME, C.ETH_SYMBOL,
                     MAINNET_RPC_URL,
                     "https://cn.etherscan.com/tx/", MAINNET_ID,
@@ -367,6 +381,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     private static final LongSparseArray<Integer> chainLogos = new LongSparseArray<Integer>()
     {
         {
+            put(AAH_ID, R.drawable.aah_256);
+            put(C4EI_ID, R.drawable.c4eix256_rnd);
             put(MAINNET_ID, R.drawable.ic_token_eth);
             put(CLASSIC_ID, R.drawable.ic_icons_network_etc); //classic_logo
             put(GNOSIS_ID, R.drawable.ic_icons_network_gnosis);
@@ -409,6 +425,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     private static final LongSparseArray<Integer> smallChainLogos = new LongSparseArray<Integer>()
     {
         {
+            put(AAH_ID, R.drawable.aah_256);
+            put(C4EI_ID, R.drawable.c4eix256_rnd);
             put(MAINNET_ID, R.drawable.ic_icons_network_eth);
             put(CLASSIC_ID, R.drawable.ic_icons_network_etc);
             put(GNOSIS_ID, R.drawable.ic_icons_network_gnosis);
@@ -451,6 +469,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     private static final LongSparseArray<Integer> chainColours = new LongSparseArray<Integer>()
     {
         {
+            put(AAH_ID, R.color.aah_main);
+            put(C4EI_ID, R.color.c4ei_main);
             put(MAINNET_ID, R.color.mainnet);
             put(CLASSIC_ID, R.color.classic);
             put(GNOSIS_ID, R.color.xdai);
@@ -499,7 +519,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
     private static final List<Long> hasEtherscanGasOracleAPI = Arrays.asList(MAINNET_ID, HECO_ID, BINANCE_MAIN_ID, POLYGON_ID);
     private static final List<Long> hasBlockNativeGasOracleAPI = Arrays.asList(MAINNET_ID, POLYGON_ID);
     //These chains don't allow custom gas
-    private static final List<Long> hasLockedGas = Arrays.asList(KLAYTN_ID, KLAYTN_BAOBAB_ID);
+    private static final List<Long> hasLockedGas = Arrays.asList(KLAYTN_ID, KLAYTN_BAOBAB_ID, AAH_ID, C4EI_ID);
     private static final List<Long> hasOpenSeaAPI = Arrays.asList(MAINNET_ID, POLYGON_ID, ARBITRUM_GOERLI_TEST_ID, AVALANCHE_ID, KLAYTN_ID, OPTIMISM_GOERLI_TEST_ID, GOERLI_ID);
 
     private static final LongSparseArray<BigInteger> blockGasLimit = new LongSparseArray<BigInteger>()
@@ -507,6 +527,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         {
             put(MAINNET_ID, BigInteger.valueOf(C.GAS_LIMIT_MAX));
             put(KLAYTN_ID, BigInteger.valueOf(C.GAS_LIMIT_MAX_KLAYTN));
+            put(AAH_ID, BigInteger.valueOf(C.GAS_LIMIT_MAX_AAH));
+            put(C4EI_ID, BigInteger.valueOf(C.GAS_LIMIT_MAX_C4EI));
             put(AURORA_MAINNET_ID, BigInteger.valueOf(C.GAS_LIMIT_MAX_AURORA));
         }
     };
@@ -599,7 +621,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         {
             return 6; //TODO: Check limit:
         }
-        else if (info.rpcServerUrl.contains("cronos.org"))
+        else if (info.rpcServerUrl.contains("cronos.org") || info.rpcServerUrl.contains("rpc.c4ex.net"))
         {
             return 5; //TODO: Check limit
         }

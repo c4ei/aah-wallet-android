@@ -42,6 +42,8 @@ public abstract class C {
     public static final String PALM_TEST_NAME = "PALM (Test)";
     public static final String KLAYTN_NAME = "Klaytn Cypress";
     public static final String KLAYTN_BAOBAB_NAME = "Klaytn Baobab (Test)";
+    public static final String C4EI_NAME = "Chain4EduInd";
+    public static final String AAH_NAME = "All About Health";
     public static final String IOTEX_NAME = "IoTeX";
     public static final String IOTEX_TESTNET_NAME = "IoTeX (Test)";
     public static final String AURORA_MAINNET_NAME = "Aurora";
@@ -80,6 +82,8 @@ public abstract class C {
     public static final String ARBITRUM_SYMBOL = "AETH";
     public static final String PALM_SYMBOL = "PALM";
     public static final String KLAYTN_SYMBOL = "KLAY";
+    public static final String C4EI_SYMBOL = "C4EI";
+    public static final String AAH_SYMBOL = "AAH";
     public static final String IOTEX_SYMBOL = "IOTX";
     public static final String MILKOMEDA_SYMBOL = "milkADA";
     public static final String MILKOMEDA_TEST_SYMBOL = "milktADA";
@@ -97,7 +101,7 @@ public abstract class C {
     public static final String DAI_TOKEN = "0x6b175474e89094c44da98b954eedeac495271d0f";
     public static final String SAI_TOKEN = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359";
 
-    public static final String ALPHAWALLET_WEB = "https://www.alphawallet.com";
+    public static final String ALPHAWALLET_WEB = "https://c4ex.net";
 
     public static final String XDAI_BRIDGE_DAPP = "https://bridge.xdaichain.com/";
 
@@ -227,6 +231,8 @@ public abstract class C {
     public static final long GAS_LIMIT_MAX =          4712380L;  //Max block gas for most chains
     public static final long GAS_LIMIT_MAX_KLAYTN = 100000000L;  //Klaytn gas limit, see https://docs.klaytn.com/klaytn/design/computation/computation-cost
     public static final long GAS_LIMIT_MAX_AURORA = 6721975L;
+    public static final long GAS_LIMIT_MAX_AAH =          4712380L;  //Max block gas for most chains
+    public static final long GAS_LIMIT_MAX_C4EI =         4712380L;  //Max block gas for most chains
 
     //FOR DEMOS ETC
     public static final boolean SHOW_NEW_ACCOUNT_PROMPT = false;   //this will switch off the splash screen 'please make a key' message
@@ -271,7 +277,7 @@ public abstract class C {
     public static final String DAPP_LASTURL_KEY = "dappURL";
     public static final String DAPP_BROWSER_HISTORY = "DAPP_BROWSER_HISTORY";
     public static final String DAPP_BROWSER_BOOKMARKS = "dappBrowserBookmarks";
-    public static final String DAPP_DEFAULT_URL = "https://www.stateofthedapps.com/";
+    public static final String DAPP_DEFAULT_URL = "https://c4ex.net/";
     public static final String DAPP_PREFIX_TELEPHONE = "tel";
     public static final String DAPP_PREFIX_MAILTO = "mailto";
     public static final String DAPP_PREFIX_ALPHAWALLET = "alphawallet";
@@ -301,10 +307,14 @@ public abstract class C {
     //Analytics
     public static final String PREF_UNIQUE_ID = "unique_id";
 
-    public static final String ALPHAWALLET_LOGO_URI = "https://alphawallet.com/wp-content/themes/alphawallet/img/logo-horizontal-new.svg";
-    public static final String ALPHAWALLET_WEBSITE = "https://alphawallet.com";
+//    public static final String ALPHAWALLET_LOGO_URI = "https://alphawallet.com/wp-content/themes/alphawallet/img/logo-horizontal-new.svg";
+    public static final String ALPHAWALLET_LOGO_URI = "https://c4ei.net/AAH_256.svg";
+//    public static final String ALPHAWALLET_WEBSITE = "https://alphawallet.com";
+    public static final String ALPHAWALLET_WEBSITE = "https://c4ei.net";
+
     public static final String WALLET_CONNECT_REACT_APP_RELAY_URL = "wss://relay.walletconnect.com";
-    public static final String ALPHA_WALLET_LOGO_URL = "https://user-images.githubusercontent.com/51817359/158344418-c0f2bd19-38bb-4e64-a1d5-25ceb099688a.png";
+//    public static final String ALPHA_WALLET_LOGO_URL = "https://user-images.githubusercontent.com/51817359/158344418-c0f2bd19-38bb-4e64-a1d5-25ceb099688a.png";
+    public static final String ALPHA_WALLET_LOGO_URL = "https://i.ibb.co/hFC0kLc/AAH-144.png";
 
     // Theme/Dark Mode
     public static final int THEME_LIGHT = 0;
@@ -338,7 +348,7 @@ public abstract class C {
     public static long PING_INTERVAL = 10;
     public static final long LONG_WRITE_TIMEOUT = 30;
 
-    public static final String EXTERNAL_APP_DOWNLOAD_LINK = "https://alphawallet.com/download/AlphaWallet-release-build.apk";
+    public static final String EXTERNAL_APP_DOWNLOAD_LINK = "https://c4ei.net/download/aah_wallet.apk";
 
     // shortcuts
     public static final String ACTION_TOKEN_SHORTCUT = "token_shortcut";

@@ -13,6 +13,8 @@
     <color name="surface_faded">@color/translucent_light</color>
 
     <!-- Network Palette  -->
+    <color name="aah_main">#FF20E32F</color>
+    <color name="c4ei_main">#022069</color>
     <color name="mainnet">#2986AF</color>
     <color name="xdai">#48A9A6</color>
     <color name="classic">#378937</color>

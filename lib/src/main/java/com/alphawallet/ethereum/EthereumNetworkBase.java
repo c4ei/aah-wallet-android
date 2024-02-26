@@ -30,6 +30,8 @@ public abstract class EthereumNetworkBase
     public static final long PALM_TEST_ID = 0x2a15c3083L; //11297108099
     public static final long KLAYTN_ID = 8217;
     public static final long KLAYTN_BAOBAB_ID = 1001;
+    public static final long C4EI_ID = 21004;
+    public static final long AAH_ID = 21133;
     public static final long IOTEX_MAINNET_ID = 4689;
     public static final long IOTEX_TESTNET_ID = 4690;
     public static final long AURORA_MAINNET_ID = 1313161554;
@@ -45,7 +47,6 @@ public abstract class EthereumNetworkBase
     public static final long HOLESKY_ID = 17000;
     public static final long LINEA_ID = 59144;
     public static final long LINEA_TEST_ID = 59140;
-
 
     public static final String MAINNET_RPC_URL = "https://mainnet.infura.io/v3/da3717f25f824cc1baa32d812386d93f";
     public static final String CLASSIC_RPC_URL = "https://www.ethercluster.com/etc";
@@ -68,6 +69,8 @@ public abstract class EthereumNetworkBase
     public static final String PALM_TEST_RPC_URL = "https://palm-testnet.infura.io/v3/da3717f25f824cc1baa32d812386d93f";
     public static final String KLAYTN_RPC = "https://klaytn.blockpi.network/v1/rpc/public";
     public static final String KLAYTN_BAOBAB_RPC = "https://klaytn-baobab.blockpi.network/v1/rpc/public";
+    public static final String C4EI_RPC = "https://rpc.c4ei.net";
+    public static final String AAH_RPC = "https://rpc.c4ex.net";
     public static final String AURORA_MAINNET_RPC_URL = "https://mainnet.aurora.dev";
     public static final String AURORA_TESTNET_RPC_URL = "https://testnet.aurora.dev";
     public static final String MILKOMEDA_C1_RPC = "https://rpc-mainnet-cardano-evm.c1.milkomeda.com";
@@ -84,6 +87,7 @@ public abstract class EthereumNetworkBase
     public static final String HOLESKY_FALLBACK_URL = "https://holesky.rpc.thirdweb.com";
     public static final String LINEA_FREE_RPC = "https://linea.drpc.org";
     public static final String LINEA_TEST_FREE_RPC = "https://rpc.goerli.linea.build";
+
 
     static Map<Long, NetworkInfo> networkMap = new LinkedHashMap<Long, NetworkInfo>()
     {
@@ -132,6 +136,11 @@ public abstract class EthereumNetworkBase
                     KLAYTN_ID, false));
             put(KLAYTN_BAOBAB_ID, new NetworkInfo("Klaytn Baobab (Test)", "KLAY", KLAYTN_BAOBAB_RPC, "https://baobab.scope.klaytn.com/tx/",
                     KLAYTN_BAOBAB_ID, false));
+            put(C4EI_ID, new NetworkInfo("C4EI", "C4EI", C4EI_RPC, "https://exp.c4ei.net/transactions/",
+                    C4EI_ID, false));
+            put(AAH_ID, new NetworkInfo("AAHealth", "AAH", AAH_RPC, "https://exp.c4ex.net/tx/",
+                    AAH_ID, false));
+
             put(AURORA_MAINNET_ID, new NetworkInfo("Aurora", "ETH", AURORA_MAINNET_RPC_URL, "https://aurorascan.dev/tx/",
                     AURORA_MAINNET_ID, false));
             put(AURORA_TESTNET_ID, new NetworkInfo("Aurora (Test)", "ETH", AURORA_TESTNET_RPC_URL, "https://testnet.aurorascan.dev/tx/",

@@ -1,0 +1,67 @@
+changeAAH.txt
+git checkout aah240226
+
+#############################################################
+패키지명 변경 방법
+1. Compact Middle Pacjages 해제
+	톱니바퀴 >Tree Appearance > Compact Middle Pacjages 해제를 하면 패키지명이 분리 된다.
+2. 변경이 필요한 패키지 디렉토리 이름 변경
+	변경 필요 패키지 디렉토리 우클릭 > Refactor > Rename > All Directories
+	Rename을 누르면 경고창이 뜨는데 그때 All Directories를 클릭하면 자동으로 패키지명을 모두 변경해준다!
+3. 그래들 파일 수정
+	변경한 패키지명으로 namespace와 applicationId을 변경한 뒤 Sync를 누르면 끝이다
+
+#############################################################
+앱 이름 변경
+안드로이드 스튜디오 왼쪽에 위치한 project에서
+app > res > value > strings.xml
+파일로 이동해서 strings.xml파일을 열자.
+	strings.xml 파일을 열면
+
+
+################################################################################################################################################################################################
+
+1    Download Android Studio.
+2    Clone this repository
+3    Obtain a free Infura API key and replace the one in build.gradle --> /home/dev/www/c4ei-wallet-android/app/build.gradle
+        c0e9018f7ea942f2a5673f23fe2d058d
+4    Generate a GitHub Personal Access Token with read:packages, read:user permission
+    Edit ~/.gradle/gradle.properties add blow properties:
+        gpr.user=Your GitHub Email --> c4ei.net@gmail.com
+        gpr.key=The GitHub Personal Access Token you created in previous step -->
+        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 를 https://www.base64encoder.io 에서  두번 암호화 해야 함
+            ---> gpr.key=WjJod1gyaEZVREZCV1RCVGREbFpVV2xHZURscmIxRkZTbXRXYzJwYVlUUlJPREZKWVdNNGFnPT0=
+5   Build the project in AndroidStudio or Run ./gradlew build to install tools and dependencies. See BUILD.md for more details.
+
+
+
+def DEFAULT_INFURA_API_KEY = "\"c0e9018f7ea942f2a5673f23fe2d058d\""
+def DEFAULT_OPENSEA_API_KEY = "\"3f32e166e52c42218896c3d2729eb818\""; //Put your OpenSea developer API key in here, otherwise you are reliant on the backup NFT fetch method (which usually works ok)
+################################################################
+https://opensea.io/account/settings?tab=developer
+c4ei.net@gmail.com
+################################################################
+def DEFAULT_POLYGONSCAN_API_KEY = "\"IF8DN5UMUJ7FWG1KDVGH7Z17KW9CREHZ1Q\""; //Put your Polygonscan developer API key in here to get access to Polygon/Mumbai 
+https://polygonscan.com/myapikey
+aah_wallet --> IF8DN5UMUJ7FWG1KDVGH7Z17KW9CREHZ1Q
+################################################################
+token discovery and transactions
+def DEFUALT_WALLETCONNECT_PROJECT_ID = "\"8b3d1de375a133958815ed8182d7f72d\""
+################################################################
+    https://cloud.walletconnect.com/sign-up
+    c4ei.net@gmail.com/Asdf!234
+
+    https://cloud.walletconnect.com/app/project?uuid=06fe53bb-d18c-4d41-b7df-f111d3931e85
+################################################################
+def DEFAULT_AURORA_API_KEY = "\"HFDDY5BNKGXBB82DE2G8S64C3C41B76PYI\""; //Put your Aurorascan.dev API key here - this one will rate limit as it is common
+
+
+
+/home/dev/www/c4ei-wallet-android/app/src/main/java/com/alphawallet/app/C.java
+
+logo need
+/home/dev/www/c4ei-wallet-android/app/src/main/java/com/alphawallet/app/repository/EthereumNetworkBase.java
+            put(AAH_ID, R.drawable.ic_aah_network_logo);
+            put(C4EI_ID, R.drawable.ic_c4ei_network_logo);
+
+ic_c4ei_network_logo
