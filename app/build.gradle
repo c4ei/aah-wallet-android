@@ -73,7 +73,7 @@ android {
         }
     }
     defaultConfig {
-        versionCode 256
+        versionCode 257
         versionName "3.77"
 
         applicationId 'net.c4ei.aahwallet'

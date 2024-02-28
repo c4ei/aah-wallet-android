@@ -890,7 +890,6 @@
     <string name="tab_alert">Alerts</string>
     <string name="unknown_network_title">Unknown Network</string>
     <string name="unknown_network">This dapp is requesting to change to an unknown chain: %1$s</string>
-    <string name="switch_and_reload"><![CDATA[Switch & Reload]]></string>
     <string name="wc_no_active_sessions">No active sessions</string>
     <string name="wc_connect_wallet">Connect Wallet</string>
     <string name="error_seed_phrase_must_words">Seed phrase can only contain words</string>
@@ -1075,4 +1074,5 @@
     <string name="override_warning_text">You might be about to unknowingly sign a transaction, which could empty your funds. You may want to sign bytecode as a developer, and you can override this warning if you set developer mode in Advanced settings.</string>
     <string name="constructor">Constructor</string>
     <string name="use_tokenscript_viewer">Use TokenScript Viewer</string>
+    <string name="switch_and_reload"><![CDATA[Switch & Reload]]></string>
 </resources>
